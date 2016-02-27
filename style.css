@@ -7,5 +7,13 @@ div {
     margin-left: auto;
     margin-right: auto
 }
-
+table {
+    display: table;
+    border-collapse: collapse;
+    border-color: gray;
+}
+.tabel td{
+    width: 25px;
+	height: 25px;
+}
 	
