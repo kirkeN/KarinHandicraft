@@ -13,7 +13,10 @@ h3 {
 .header{
 	display: inline;
 }
-body.esileheTaust{
+a:hover { 
+    background-color: #ff4d4d;
+}
+.esileheTaust{
 	background-image: url("kodavere_voo2.jpg");
     background-repeat: no-repeat;
 	background-position-x: center;
@@ -21,7 +24,7 @@ body.esileheTaust{
 	border-radius: 10px;
 	
 }
-p.talupojaroivastus{
+.talupojaroivastus{
 	padding: 15px;
 	color: white;
 	background-color: rgba(51, 0, 26 ,0.8);
