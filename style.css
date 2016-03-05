@@ -1,11 +1,31 @@
 div {
 	margin: 15px;
 	text-align: justify;
+	font-family: Helvetica, Arial, sans-serif;
 }
 .centered {
 	display: block;
     margin-left: auto;
     margin-right: auto
+}
+h1 {
+    color: rgb(77, 0, 40);
+    font-weight: 800;
+}
+h1 {
+    color: rgb(77, 0, 40);
+}
+body.esileheTaust{
+	background-image: url("kodavere_voo2.jpg");
+    background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 150px;
+}
+.talupojaroivastus{
+	padding: 15px;
+	color: white;
+	background-color: rgba(51, 0, 26 ,0.8);
+
 }
 table {
     display: table;
@@ -16,4 +36,11 @@ table {
     width: 25px;
 	height: 25px;
 }
+.inner-pre{
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 2px #1a000d;
+}
+
+
 	
