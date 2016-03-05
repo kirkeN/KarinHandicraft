@@ -1,31 +1,31 @@
 div {
 	margin: 15px;
 	text-align: justify;
-	font-family: Helvetica, Arial, sans-serif;
-}
-.centered {
-	display: block;
-    margin-left: auto;
-    margin-right: auto
+	font-family: Helvetica, Arial;
 }
 h1 {
     color: rgb(77, 0, 40);
     font-weight: 800;
 }
-h1 {
+h3 {
     color: rgb(77, 0, 40);
+}
+.header{
+	display: inline;
 }
 body.esileheTaust{
 	background-image: url("kodavere_voo2.jpg");
     background-repeat: no-repeat;
 	background-position-x: center;
 	background-position-y: 150px;
+	border-radius: 10px;
+	
 }
-.talupojaroivastus{
+p.talupojaroivastus{
 	padding: 15px;
 	color: white;
 	background-color: rgba(51, 0, 26 ,0.8);
-
+	border-radius: 25px;
 }
 table {
     display: table;
@@ -37,8 +37,16 @@ table {
 	height: 25px;
 }
 .inner-pre{
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+	background-color: rgba(51, 0, 26 ,0.8);
+	border-radius: 25px;
+	text-align: left;
 	color: white;
-	font-weight: bold;
+	font-family: Times, serif;
+	font-style: italic;
 	text-shadow: 2px 2px #1a000d;
 }
 
