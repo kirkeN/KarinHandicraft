@@ -1,17 +1,36 @@
-div {
-	margin: 15px;
+#page {
+	margin: auto;
+	max-width: 1000px;
+	min-width: 600px;
 	text-align: justify;
 	font-family: Helvetica, Arial;
 }
+#ulmenu{
+	position: fixed;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #7DCEA0;
+}
+.menu {
+    float: left;
+}
+.menu a{
+    display: block;
+    color: Black;
+    text-align: center;
+    padding: 10px 70px;
+    text-decoration: none;
+}
+
 h1 {
+	clear: both;
     color: rgb(77, 0, 40);
     font-weight: 800;
 }
 h3 {
     color: rgb(77, 0, 40);
-}
-.header{
-	display: inline;
 }
 a:hover { 
     background-color: #ff4d4d;
@@ -30,15 +49,6 @@ a:hover {
 	background-color: rgba(51, 0, 26 ,0.8);
 	border-radius: 25px;
 }
-table {
-    display: table;
-    border-collapse: collapse;
-    border-color: gray;
-}
-.tabel td{
-    width: 25px;
-	height: 25px;
-}
 .inner-pre{
 	display: block;
 	margin-left: auto;
@@ -51,6 +61,15 @@ table {
 	font-family: Times, serif;
 	font-style: italic;
 	text-shadow: 2px 2px #1a000d;
+}
+table {
+    display: table;
+    border-collapse: collapse;
+    border-color: gray;
+}
+.tabel td{
+    width: 25px;
+	height: 25px;
 }
 
 
