@@ -27,6 +27,12 @@ function showDetails(el){
 		hoidja.style.display="initial";
 	}
 }
+	
+function showRandom (){
+	pics = document.getElementsByClassName("tootepilt");
+	showDetails(pics[Math.floor((Math.random() * pics.length) + 1)]);
+}
+
 
 function hideDetails() {
 	document.getElementById('hoidja').style.display="none";
