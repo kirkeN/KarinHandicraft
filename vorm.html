@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Suvalised vormid</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<form action="vorm.html" method = "post">
-			Kasutajanimi:<br>
-			<input type="text" name="username" size="20" placeholder = "Paul Smith"><br>
-			Salasõna:<br>
-			<input type="text" name="password" size="20" maxlength = "12"><br> <br>
-			<input type="submit" value="Submit">
-		</form>
-		<br>
-		<form action="vorm.html" method = "GET">
-			<input id ="1" type="radio" name="rate" value="1"> <label for="1">1	</label>
-			<input id ="2" type="radio" name="rate" value="2"> <label for="2">2	</label>
-			<input id ="3" type="radio" name="rate" value="3"> <label for="3">3	</label> 
-			<input id ="4" type="radio" name="rate" value="4"> <label for="4">4	</label> 
-			<input id ="5" type="radio" name="rate" value="5" checked> <label for="5">5	</label> <br>
-			<input type="submit" value="Submit">
-		</form>
-		<br>
-		<form action="vorm.html" method = "post">
-		 <fieldset>
-		  <legend>Kasutaja roll:</legend>
-			<input type="checkbox" name="visitor" value="Craftsman"> Craftsman <br>
-			<input type="checkbox" name="visitor" value="Student/Teacher"> Student/Teacher <br>
-			<input type="checkbox" name="visitor" value="Client"> Client <br>
-			<input type="checkbox" name="visitor" value="Other" checked> Other <br>
-			<textarea name="comment" cols="50" rows="5" placeholder="Comments" ></textarea><br>
-			<input type="submit" value="Submit">
-		  </fieldset>
-		</form>
-		<br>
-		<form action="vorm.html" method = "GET">
-			<select name = "articles" action="vorm.html" method = "post">
-				<option value="gloves">Kindad</option>
-				<option value="socks">Villased sokid</option>
-				<option value="kanzashi">Kanzashi lilled</option>
-				<option value="waistband">Vöö</option>
-				<option value="scarf">Sall</option>
-			</select>
-			<input type="submit" value="Submit"> 
-		</form> <br>
-		<p>
-			<a href = "tooted.html" target="frame1" >Tooted </a>
-			<a href = "tabel.html" target="frame1" >Tabel </a>
-		</p>
-		<iframe src="tabel.html" width = "600" height = "200"  name= "frame1"> </iframe>
-	</body>
-	</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Suvalised vormid</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form action="vorm.html" method = "post">
+    Kasutajanimi:<br>
+    <input type="text" name="username" size="20" placeholder = "Paul Smith"><br>
+    Salasõna:<br>
+    <input type="text" name="password" size="20" maxlength = "12"><br> <br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<form action="vorm.html" method = "GET">
+    <input id ="1" type="radio" name="rate" value="1"> <label for="1">1	</label>
+    <input id ="2" type="radio" name="rate" value="2"> <label for="2">2	</label>
+    <input id ="3" type="radio" name="rate" value="3"> <label for="3">3	</label>
+    <input id ="4" type="radio" name="rate" value="4"> <label for="4">4	</label>
+    <input id ="5" type="radio" name="rate" value="5" checked> <label for="5">5	</label> <br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<form action="vorm.html" method = "post">
+    <fieldset>
+        <legend>Kasutaja roll:</legend>
+        <input type="checkbox" name="visitor" value="Craftsman"> Craftsman <br>
+        <input type="checkbox" name="visitor" value="Student/Teacher"> Student/Teacher <br>
+        <input type="checkbox" name="visitor" value="Client"> Client <br>
+        <input type="checkbox" name="visitor" value="Other" checked> Other <br>
+        <textarea name="comment" cols="50" rows="5" placeholder="Comments" ></textarea><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+<br>
+<form action="vorm.html" method = "GET">
+    <select name = "articles" action="vorm.html" method = "post">
+        <option value="gloves">Kindad</option>
+        <option value="socks">Villased sokid</option>
+        <option value="kanzashi">Kanzashi lilled</option>
+        <option value="waistband">Vöö</option>
+        <option value="scarf">Sall</option>
+    </select>
+    <input type="submit" value="Submit">
+</form> <br>
+<p>
+    <a href = "tooted.html" target="frame1" >Tooted </a>
+    <a href = "tabel.html" target="frame1" >Tabel </a>
+</p>
+<iframe src="tabel.html" width = "600" height = "200"  name= "frame1"> </iframe>
+</body>
+</html>
