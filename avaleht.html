@@ -26,6 +26,18 @@
                     $("> ul", this).hide();
                 }
             });
+            var backgroundImage = ["korvarongad1.jpg", "lilled1.jpg", "kodavere_voo2.jpg"];
+            var nr = 0;
+
+            $(".esileheTaust").click(function () {
+                $(this).css('background-image', 'url(' + backgroundImage[nr] + ')');
+                if( nr < backgroundImage.length-1) {
+                    nr++
+                }
+                else{
+                    nr = 0;
+                }
+            });
         });
     </script>
 </head>
@@ -67,7 +79,7 @@
         villasest riidest umbkuuetaoline vene naiste sarafani tüüpi kehakate, mis säilitas varasema kuue eestikeelse nimetuse rüü. Rüü oli vale- ehk liigvarrukatega,
         mis rippusid vöö alla pistetult seljal. Setude kokkukuuluvust teiste lõunaeestlastega tõendavad naiste peakatted, ehted, kaugest minevikust pärinevad puusapõlled,
         geomeetriline ornament. </p>
-    <!-- <img class="centered" src="kodavere_voo.jpg" alt="Kodavere vöö" width = "1000" height = "667" />  -->
+    <!-- <img class="centered" src="kodavere_voo2.jpg" alt="Kodavere vöö" width = "1000" height = "667" />  -->
     <br>
 			<pre> <span class="inner-pre">
 			Tule mulle, kitsekene
