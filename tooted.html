@@ -16,15 +16,21 @@
         <li class="menu"><a href="tabel.html">Tabel</a></li>
     </ul>
     <div>
-
         <ul id = tootedmenu>
-            <li><img class="tootepilt" src="korvarongad1.jpg" alt="Süstikpits" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="lilled1.jpg" alt="Kanzashi lilled" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="kindad1.jpg" alt="Kindad" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="sokid1.jpg" alt="Sokid" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="kangasteljed1.jpg" alt="Kangastelje tööd" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="pudelisuuvoo.jpg" alt="Vööd" width = "318.1" height = "212" /></li>
+                <?php foreach($pildid as $var): ?>
+                        <li>
+                        <img class="tootepilt" src=" <?php echo $var['big']; ?>" alt = "<?php echo $var['alt']; ?>" width = "318.1" height = "212"/>
+                        </li>
+                <?php endforeach; ?>
         </ul>
+        <!-- <ul id = tootedmenu>
+             <li><img class="tootepilt" src="korvarongad1.jpg" alt="Süstikpits" width = "318.1" height = "212" /></li>
+             <li><img class="tootepilt" src="lilled1.jpg" alt="Kanzashi lilled" width = "318.1" height = "212" /></li>
+             <li><img class="tootepilt" src="kindad1.jpg" alt="Kindad" width = "318.1" height = "212" /></li>
+             <li><img class="tootepilt" src="sokid1.jpg" alt="Sokid" width = "318.1" height = "212" /></li>
+             <li><img class="tootepilt" src="kangasteljed1.jpg" alt="Kangastelje tööd" width = "318.1" height = "212" /></li>
+             <li><img class="tootepilt" src="pudelisuuvoo.jpg" alt="Vööd" width = "318.1" height = "212" /></li>
+         </ul> -->
     </div>
     <div id="hoidja" style="display:none;">
         <div id="taust"></div>
