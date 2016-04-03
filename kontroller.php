@@ -8,7 +8,7 @@ $pildid=array(
     array("big"=>"kangasteljed1.jpg", "small"=>"pisipilt/kangasteljed1.jpg", "alt"=>"kangastelje tööd")
 );
 
-
+include_once('head.html');
 include("tooted.html");
 
 
