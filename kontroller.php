@@ -1,6 +1,6 @@
 <?php
 require_once("functions.php");
-//alusta_sessioon();
+alusta_sessioon();
 
 $pildid=array(
     array("big"=>"korvarongad1.jpg", "small"=>"pisipilt/korvarongad1.jpg", "alt"=>"kõrvarõngad"),
@@ -23,6 +23,9 @@ switch($mode){
         break;
     case "tooted":
         kuvaTooted();
+        break;
+    case "register":
+        kuvaRegistreeri();
         break;
     case "loginvorm":
         kuvaLogin();

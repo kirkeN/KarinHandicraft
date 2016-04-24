@@ -9,13 +9,21 @@
 <body>
 <div id="page">
     <ul id="ulmenu">
-        <li class="menu"><a class="active" href="avaleht.html">Home</a></li>
-        <li class="menu"><a href="#news">Uudised</a></li>
-        <li class="menu"><a href="tooted.html">Tooted</a></li>
+        <?php if(empty($_SESSION["user"])):?>
+        <li class="menu"><a class="active" href="?mode=avaleht">Home</a></li>
+        <li class="menu"><a href="?mode=loginvorm">Logi sisse</a></li>
+        <li class="menu"><a href="?mode=tooted">Tooted</a></li>
         <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
         <li class="menu"><a href="tabel.html">Tabel</a></li>
+        <?php else: ?>
+        <li class="menu"><a class="active" href="?mode=avaleht">Home</a></li>
+        <li class="menu"><a href="#news">Uudised</a></li>
+        <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
+        <?php endif; ?>
     </ul>
 </div>
 
-</body>
-</html>
+<?php if(!empty($_SESSION["teade"])): ?>
+<p style = "color:deeppink"><?php echo $_SESSION["teade"]; ?></p>
+<?php unset($_SESSION["teade"]); ?>
+<?php endif; ?>
