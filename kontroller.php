@@ -1,4 +1,7 @@
 <?php
+require_once("functions.php");
+//alusta_sessioon();
+
 $pildid=array(
     array("big"=>"korvarongad1.jpg", "small"=>"pisipilt/korvarongad1.jpg", "alt"=>"kõrvarõngad"),
     array("big"=>"lilled1.jpg", "small"=>"pisipilt/lilled1.jpg", "alt"=>"lilled"),
@@ -8,8 +11,28 @@ $pildid=array(
     array("big"=>"kangasteljed1.jpg", "small"=>"pisipilt/kangasteljed1.jpg", "alt"=>"kangastelje tööd")
 );
 
-include_once('head.html');
-include("tooted.html");
+if(!empty($_GET["mode"])) {
+    $mode = $_GET["mode"];
+} else {
+    $mode = "empty";
+}
 
-
+switch($mode){
+    case "avaleht":
+        kuvaAvaleht();
+        break;
+    case "tooted":
+        kuvaTooted();
+        break;
+    case "loginvorm":
+        kuvaLogin();
+        break;
+    case "logout":
+        logivalja();
+        break;
+    default:
+        kuvaAvaleht();
+        break;
+}
 ?>
+
