@@ -1,17 +1,17 @@
 
 <h1 id="title">Logi sisse</h1>
-<form action="?mode=loginvorm" method="POST">
+<form action="?page=loginaken" method="POST">
 
         <p>Kasutajanimi</p>
         <input type="text" name="username" placeholder="kasutajanimi"
             value="<?php if (!empty($_POST['username'])) echo htmlspecialchars($_POST['username']);?>"/>
         <p>Parool</p>
-        <input type="password" name="parool" placeholder="Sisesta parool"/>
+        <input type="password" name="password" placeholder="Sisesta parool"/>
         <br/><br/>
         <input type="submit" value="Logi sisse"/>
 </form>
 
-<a href="?mode=register">Registreeri kasutajaks</a>
+<a href="register.html">Registreeri kasutajaks</a>
 
 <?php if(!empty($errors)):
      foreach($errors as $e):?>

@@ -9,17 +9,20 @@
 <body>
 <div id="page">
     <ul id="ulmenu">
-        <?php if(empty($_SESSION["user"])):?>
-        <li class="menu"><a class="active" href="?mode=avaleht">Kodu</a></li>
-        <li class="menu"><a href="?mode=tooted">Tooted</a></li>
+        <li class="menu"><a class="active" href="avaleht.html">Kodu</a></li>
+        <li class="menu"><a href="tooted.html">Tooted</a>
+            <ul id="alammenu">
+                <li class="almenu"><a href="#systikpits">Süstikpits</a></li>
+                <li class="almenu"><a href="#news">Kindad</a></li>
+                <li class="almenu"><a href="#sokid">Sokid</a></li>
+                <li class="almenu"><a href="#kangasteljed">Kangastelje tööd</a></li>
+                <li class="almenu"><a href="#vood">Vööd</a></li>
+                <li class="almenu"><a href="#lilled">Kanzashi lilled</a></li>
+            </ul>
+        </li>
         <li class="menu"><a href="tabel.html">Hinnad</a></li>
         <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
-        <li class="menu"><a href="?mode=loginvorm">Logi sisse</a></li>
-        <?php else: ?>
-        <li class="menu"><a class="active" href="?mode=avaleht">Home</a></li>
-        <li class="menu"><a href="#news">Uudised</a></li>
-        <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
-        <?php endif; ?>
+        <li class="menu"><a href="loginaken.html">Logi sisse</a></li>
     </ul>
 </div>
 

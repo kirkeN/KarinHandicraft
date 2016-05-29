@@ -1,0 +1,14 @@
+create table kinarusk_kasutajad (
+id integer PRIMARY KEY auto_increment,
+username VARCHAR(100) UNIQUE ,
+passwd VARCHAR(50)
+);
+
+insert into kinarusk_kasutajad (username, passwd) VALUES ('sydametemurdja', 's33eiolenali');
+
+create table kinarusk_kommentaarid (
+id INTEGER PRIMARY KEY auto_increment,
+user_id INTEGER,
+content VARCHAR(500),
+postedat CURRENT_DATE
+);

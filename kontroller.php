@@ -1,6 +1,7 @@
 <?php
 require_once("functions.php");
-alusta_sessioon();
+connect_db();
+session_start();
 
 $pildid=array(
     array("big"=>"korvarongad1.jpg", "small"=>"pisipilt/korvarongad1.jpg", "alt"=>"kõrvarõngad"),
@@ -10,9 +11,9 @@ $pildid=array(
     array("big"=>"pudelisuuvoo.jpg", "small"=>"pisipilt/pudelisuuvoo.jpg", "alt"=>"pudelisuuvöö"),
     array("big"=>"kangasteljed1.jpg", "small"=>"pisipilt/kangasteljed1.jpg", "alt"=>"kangastelje tööd")
 );
-
-if(!empty($_GET["mode"])) {
-    $mode = $_GET["mode"];
+$mode="";
+if(!empty($_GET["page"])) {
+    $mode = $_GET["page"];
 } else {
     $mode = "empty";
 }
@@ -25,16 +26,17 @@ switch($mode){
         kuvaTooted();
         break;
     case "register":
-        kuvaRegistreeri();
+        reg();
         break;
-    case "loginvorm":
-        kuvaLogin();
+    case "loginaken":
+        login();
         break;
     case "logout":
         logivalja();
         break;
     default:
         kuvaAvaleht();
+     
         break;
 }
 ?>

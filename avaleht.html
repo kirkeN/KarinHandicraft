@@ -10,10 +10,10 @@
         $(document).ready(function() {
             $("h1").on({
                 mouseenter: function () {
-                    $(this).css("color", "red");
+                    $(this).css('text-shadow', '4px 4px  rgba(0, 0, 0, 0.19)');
                 },
                 mouseleave: function () {
-                    $(this).css("color", "rgb(77, 0, 40)");
+                    $(this).css('text-shadow', '0px 0px #000000');
                 },
 
             });
@@ -26,26 +26,25 @@
                     $("> ul", this).hide();
                 }
             });
-            var backgroundImage = ["korvarongad1.jpg", "lilled1.jpg", "kodavere_voo2.jpg"];
-            var nr = 0;
-
-            $(".esileheTaust").click(function () {
-                $(this).css('background-image', 'url(' + backgroundImage[nr] + ')');
-                if( nr < backgroundImage.length-1) {
-                    nr++
-                }
-                else{
-                    nr = 0;
-                }
-            });
+            var quotes = ["Tõelist loovust ei suuda keegi valitseda, sel tuleb lasta minna oma teed. (Johann Wolfgang Goethe,1749-1832)",
+                "Loov vaim mängib alati objektidega, mida ta armastab. (Carl Gustav Jung, 1875-1961)",
+                "Mis on algupärasus? Avastamata plagiaat. (William Ralph Inge, 1860-1954)",
+                "Hea vaataja on samuti looja. (Šveitsi vanasõna)",
+                "Väljenduse isikupära on kogu kunsti algus ja lõpp. (Johann Wolfgang Goethe,1749-1832)",
+                "Kriitika on kerge, kunst raske. (Philippe Destouches, 1680-1754)"];
+            var quote = quotes[Math.floor(Math.random() * quotes.length)];
+            function newquote() {
+                $(".proverb").text(quote);
+            }
+            window.onload = newquote();
         });
     </script>
 </head>
-<body class = "esileheTaust">
+<body class = "homebackground">
 <div id="page">
     <ul id="ulmenu">
-        <li class="menu"><a class="active" href="avaleht.html">Home</a></li>
-        <li class="menu"><a href="loginaken.html">Logi sisse</a>
+        <li class="menu"><a class="active" href="avaleht.html">Kodu</a></li>
+        <li class="menu"><a href="tooted.html">Tooted</a>
             <ul id="alammenu">
                 <li class="almenu"><a href="#systikpits">Süstikpits</a></li>
                 <li class="almenu"><a href="#news">Kindad</a></li>
@@ -55,42 +54,29 @@
                 <li class="almenu"><a href="#lilled">Kanzashi lilled</a></li>
             </ul>
         </li>
-        <li class="menu"><a href="tooted.html">Tooted</a></li>
+        <li class="menu"><a href="tabel.html">Hinnad</a></li>
         <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
-        <li class="menu"><a href="tabel.html">Tabel</a></li>
+        <li class="menu"><a href="loginaken.html">Logi sisse</a></li>
     </ul>
     <br>
     <h1>Karin Otsuse käsitöö</h1>
-    <h3>Siia lehele on koondatud Karin Otsuse, Räpina aianduskooli tekstiilitöö eriala õpetaja, parimad kästitöö palad. </h3>
+    <h3>Siia lehele on koondatud Karin Otsuse, Räpina aianduskooli tekstiilitöö eriala õpetaja parimad kästitöö palad. </h3>
 
-    <p class="kasitoo">
+    <p class="hometext">
         Karin Otsus on kästitöö fanaatik, kelle leivanumbriks on kangastelgedel kootud rahvariiete mustrilised vööd ning süstikpits ehk frivolitee. Lisaks teeb Karin
         hoolsalt kootud kudumeid, nagu villased sokid, mütsid-salid-kindad, kampsunid jne. Aga see pole veel kõik, mõned aastad tagasi avastas ta enda jaoks ka
         Kanzashi lilled, millest saab teha väga ilusaid ehteid, näiteks peavõrusid või pandlaid.
     </p>
     <!-- <img class="centered" src="kodavere_voo2.jpg" alt="Kodavere vöö" width = "1000" height = "667" />  -->
     <br>
-			<pre> <span class="inner-pre">
+			<p> <span class="proverb">
 
-        Tõelist loovust ei suuda keegi valitseda, sel tuleb lasta minna oma teed.
+            Tõelist loovust ei suuda keegi valitseda, sel tuleb lasta minna oma teed.
                                                         Johann Wolfgang Goethe,1749-1832
 
-            Loov vaim mängib alati objektidega, mida ta armastab.
-                                     Carl Gustav Jung, 1875-1961
+			</span></p>
 
-            Mis on algupärasus? Avastamata plagiaat.
-                      William Ralph Inge, 1860-1954
-
-            Hea vaataja on samuti looja.
-                        Šveitsi vanasõna
-
-            Väljenduse isikupära on kogu kunsti algus ja lõpp
-                             Johann Wolfgang Goethe,1749-1832
-
-            Kriitika on kerge, kunst raske.
-                Philippe Destouches, 1680-1754
-
-			</span></pre>
-</div>
-</body>
-</html>
+    <br>
+ </div>
+ </body>
+ </html>
