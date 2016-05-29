@@ -41,6 +41,42 @@ function kuvaRegistreeri() {
     include_once("head.html");
     include("register.html");
 }
+function reg(){
+        if(!empty($_POST)){
+            $errors=array();
+            if (empty($_POST['username'])){
+                $errors[]="Kasutajanimi on vajalik!";
+            }
+            if (empty($_POST['password'])){
+                $errors[]="Parool on vajalik!";
+            }
+            if (empty($_POST['password2'])){
+                $errors[]="Parooli peab 2 korda sisestama!";
+            }
+            if(!empty($_POST['password']) && !empty($_POST['password2']) && $_POST['password']!=$_POST['password2']) {
+                //paroolid ei ole v6rdsed
+                $errors[]="Paroolid ei ole identsed!";
+            }
+            if (empty($errors)){
+                // turvalisus
+                $user=mysqli_real_escape_string($L,$_POST['username']);
+                $pass=mysqli_real_escape_string($L,$_POST['password']);
+
+                $sql="INSERT INTO kasutajad (username, passwd) VALUES ('$user', SHA1('$pass'))";
+                $result = mysqli_query($L, $sql);
+                if ($result){
+                    // kÃµik ok, 
+                    $_SESSION['message']="Registreerumine õnnestus, logi sisse";
+                    header("Location: ?page=login");
+                    exit(0);
+                } else {
+                    $errors[]="Registreerumine luhtus, proovi hiljem jälle...";
+                }
+        }
+    include_once("views/head.html");
+    include("views/register.html");
+    include_once("views/foot.html");
+}
 
 function logivalja() {
     lopeta_sessioon();

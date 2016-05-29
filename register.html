@@ -1,22 +1,22 @@
 <h1 id="pealkiri">Registreeri kasutajaks</h1>
-<form action="esimenePraks.html" method="POST">
-    <table>
-        <tr>
-            <td>Kasutajanimi:</td>
-            <td><input type="text" name="kasutajanimi" size="20" placeholder="Sisesta kasutajanimi"/></td>
-        </tr>
-        <tr>
-            <td>Parool:</td>
-            <td><input type="password" name="parool" size="20" placeholder="Sisesta parool"/></td>
-        </tr>
-        <tr>
-            <td>Parool uuesti:</td>
-            <td><input type="password" name="parool2" size="20" placeholder="Sisesta parool"/></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td><button type="submit">Register</button></td>
-        </tr>
-    </table>
+<form action="?page=register" method="POST">
+    <div id="register">
+            <p>Kasutajanimi</p>
+            <input type="text" name="username" placeholder="kasutajanimi"
+                   value = "<?php if (!empty($_POST['username'])) echo htmlspecialchars($_POST['username']);?>" />
+            <p>Parool</p>
+            <input type="password" name="password" placeholder="parool"/>
+            <p>Parool uuesti</p>
+            <input type="password" name="password2" placeholder="parool uuesti"/>
+            <br/><br/>
+            <input type="submit" value="Registreeri"/>
+    </div>
 </form>
-</div>
+
+<?php if(!empty($errors)):
+    foreach($errors as $e):?>
+        <p style="color:deeppink"><?php echo $e; ?></p>
+<?php endforeach;
+endif;?>
+
+
