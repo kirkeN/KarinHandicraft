@@ -8,15 +8,7 @@ function connect_db(){
     $L = mysqli_connect($host, $user, $pass, $db) or die("Ei saa mootoriga ühendust");
     mysqli_query($L, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($L));
 }
-function kuvaAvaleht() {
-    include_once("head.html");
-    include("avaleht.html");
-}
 
-function kuvaTooted() {
-    include_once("head.html");
-    include("tooted.html");
-}
 function login() {
     global $L;
     if(!empty($_POST)) {
@@ -47,13 +39,11 @@ function login() {
             }
         }
     }
-    include_once("head.html");
-    include("loginaken.html");
 }
 
 function kuvaRegistreeri() {
-    include_once("head.html");
-    include("register.html");
+    include_once("views/head.html");
+    include("views/register.html");
 }
 function reg(){
     global $L;
@@ -89,8 +79,6 @@ function reg(){
             }
         }
     }
-    include_once("head.html");
-    include("register.html");
 }
 
 function logivalja() {

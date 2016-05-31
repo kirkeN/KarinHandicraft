@@ -12,31 +12,43 @@ $pildid=array(
     array("big"=>"kangasteljed1.jpg", "small"=>"pisipilt/kangasteljed1.jpg", "alt"=>"kangastelje tööd")
 );
 $mode="";
-if(!empty($_GET["page"])) {
-    $mode = $_GET["page"];
+if(!empty($_GET["mode"])) {
+    $mode = $_GET["mode"];
 } else {
     $mode = "empty";
 }
 
 switch($mode){
     case "avaleht":
-        kuvaAvaleht();
+        include_once("views/head.html");
+        include("views/avaleht.html");
         break;
     case "tooted":
-        kuvaTooted();
+        include_once("views/head.html");
+        include("views/tooted.html");
         break;
     case "register":
         reg();
         break;
-    case "loginaken":
+    case "login":
         login();
         break;
     case "logout":
         logivalja();
         break;
+    case "hinnad":
+        include_once("views/head.html");
+        include("views/tabel.html");
+        break;
+    case "loginaken":
+        include("views/loginaken.html");
+        break;
+    case "registeraken":
+        include("views/register.html");
+        break;
     default:
-        kuvaAvaleht();
-     
+        include_once("views/head.html");
+        include("views/avaleht.html");
         break;
 }
 ?>
