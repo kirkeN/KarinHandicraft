@@ -1,6 +1,6 @@
 
 <h1 id="title">Logi sisse</h1>
-<form action="?mode=loginaken" method="POST">
+<form action="?mode=login" method="POST">
 
         <p>Kasutajanimi</p>
         <input type="text" name="username" placeholder="kasutajanimi"
@@ -11,11 +11,11 @@
         <input type="submit" value="Logi sisse"/>
 </form>
 
-<a href="?mode=registeraken">Registreeri kasutajaks</a>
+<a href="?mode=register">Registreeri kasutajaks</a>
 
 <?php if(!empty($errors)):
      foreach($errors as $e):?>
 <p style="color:deeppink"><?php echo $e;?></p>
 <?php endforeach;
 endif;?>
-</div>
+

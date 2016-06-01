@@ -5,6 +5,13 @@
     text-align: justify;
     font-family: Helvetica, Arial;
 }
+#mainpage {
+    margin: auto;
+    max-width: 1000px;
+    min-width: 600px;
+    text-align: justify;
+    font-family: Helvetica, Arial;
+}
 #ulmenu{
     position: fixed;
     list-style-type: none;
@@ -14,12 +21,11 @@
     background-color: #7DCEA0;
     min-width: 1000px;
 }
-#alammenu{
+#alammenu {
     position: relative;
     list-style-type: none;
     margin: auto;
     padding: 0px;
-    background-color: #7DCEA0;
     max-width: 200px;
 }
 .menu {
@@ -34,7 +40,6 @@
     text-decoration: none;
 }
 .almenu a{
-    display: block;
     color: rgb(77, 0, 40);
     font-weight: bold;
     text-align: center;
@@ -44,51 +49,15 @@
 li > ul {
     display: none;
 }
-
-#productmenu{
-    position: absolute;
-    top: 70px;
+.tootedmenu{
     list-style-type: none;
-    overflow: hidden;
-    min-width: 1000px;
-    max-width: 1000px;
 }
 .tootepilt {
     position: relative;
-
+    top: 50px;
     float: left;
-    margin: 0 15.24px 15px 0;
-}
-#producttext {
-    position: relative;
-    top: 60px;
-    left: 6px;
-    padding: 10px 74px;
-    list-style-type: none;
-    min-width: 1000px;
-    max-width: 1000px;
-}
-.producttext {
-    position: relative;
-    left: -74px;
-    float: left;
-    margin: 0 15px 9px 0;
-    padding: 100px 74px;
-    text-align: center;
-    min-width: 170px;
-    color: white;
-    font-weight: 600;
-    font-family: Helvetica, Arial;
-}
-#producttext a :hover {
-    position: relative;
-    left: -74px;
-    float: left;
-    margin: 0 15px 9px 0;
-    padding: 100px 74px;
-    text-align: center;
-    min-width: 170px;
-    background-color: rgba(248, 248, 248 ,0.6);
+    margin: 0 15px 15px 0;
+    z-index: -1;
 }
 
 h1 {
@@ -112,7 +81,7 @@ h3 {
 }
 .hometext{
     position: relative;
-    top: 20px;
+    top: 100px;
     padding: 15px;
     color: white;
     font-size: 120%;
@@ -136,15 +105,17 @@ h3 {
     font-size: 150%;
     text-shadow: 2px 2px #1a000d;
 }
+
 table {
+    position: relative;
+    top: 150px;
     display: table;
     border-collapse: collapse;
     border-color: gray;
+    margin: auto;
+    z-index: -1;
 }
-.tabel td{
-    width: 25px;
-    height: 25px;
-}
+
 /* Siit algab piltide lehe keskel kuvamine; kood: http://enos.itcollege.ee/~ttanav/VRI/Praktikumid/prax05/ylesanne.html */
 #taust{ /* taust, mis peidab lehe sisu */
     position: fixed;
@@ -190,4 +161,19 @@ table {
     height: 0px;
 }
 
+#footer {
+    position: absolute;
+    top: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(102, 102, 102, 0.53);
+    font-size: 14px;
+}
+
+#foot {
+    margin: auto;
+}
 

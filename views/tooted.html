@@ -1,57 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Karini tooted</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="skript.js"> </script>
-</head>
-<body>
-    <div id="page">
-            <ul id="ulmenu">
-                <li class="menu"><a class="active" href="avaleht.html">Kodu</a></li>
-                <li class="menu"><a href="tooted.html">Tooted</a>
-                    <ul id="alammenu">
-                        <li class="almenu"><a href="#systikpits">Süstikpits</a></li>
-                        <li class="almenu"><a href="#news">Kindad</a></li>
-                        <li class="almenu"><a href="#sokid">Sokid</a></li>
-                        <li class="almenu"><a href="#kangasteljed">Kangastelje tööd</a></li>
-                        <li class="almenu"><a href="#vood">Vööd</a></li>
-                        <li class="almenu"><a href="#lilled">Kanzashi lilled</a></li>
-                    </ul>
-                </li>
-                <li class="menu"><a href="tabel.html">Hinnad</a></li>
-                <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
-                <li class="menu"><a href="loginaken.html">Logi sisse</a></li>
-            </ul>
-        <!-- <ul id = tootedmenu>
+
+    <div id="mainpage">
+        <ul id = tootedmenu>
                <?php foreach($pildid as $var): ?>
                        <li>
-                       <img class="tootepilt" src="<?php echo $var['big']; ?>" alt = "<?php echo $var['alt']; ?>" width = "318.1" height = "212"/>
+                       <img class="tootepilt" src="<?php echo $var['big']; ?>" alt = "<?php echo $var['alt']; ?>" width = "318" height = "212"/>
                        </li>
                <?php endforeach; ?>
-       </ul> -->
-        <div class="relative">
-        <ul id = productmenu>
-            <li><img class="tootepilt" src="korvarongad1.jpg" alt="Süstikpits" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="lilled1.jpg" alt="Kanzashi lilled" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="kindad1.jpg" alt="Kindad" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="sokid1.jpg" alt="Sokid" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="kangasteljed1.jpg" alt="Kangastelje tööd" width = "318.1" height = "212" /></li>
-            <li><img class="tootepilt" src="pudelisuuvoo.jpg" alt="Vööd" width = "318.1" height = "212" /></li>
-        </ul>
-            <div class="absolute">
-                <ul id = producttext>
-                    <a href="korvarongad1.jpg"><li class="producttext">Kõrvarõngad</li></a>
-                    <a href="lilled1.jpg"><li class="producttext">Kanzashi lilled</li></a>
-                    <a href="kindad1.jpg"><li class="producttext">Kindad</li></a>
-                    <a href="sokid1.jpg"><li class="producttext">Sokid</li></a>
-                    <a href="kangasteljed1.jpg"><li class="producttext">Kangastelje tööd</li></a>
-                    <a href="pudelisuuvoo.jpg"><li class="producttext">Vööd</li></a>
-                </ul>
-            </div>
-        </div>
-   </div>
+       </ul>
+    </div>
+
    <div id="hoidja" style="display:none;">
        <div id="taust"></div>
        <div id="tabel">
@@ -64,5 +21,3 @@
            </div>
        </div>
    </div>
-</body>
-</html>

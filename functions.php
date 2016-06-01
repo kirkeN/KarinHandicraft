@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors", 1);
 function connect_db(){
     global $L;
     $host="localhost";
@@ -16,7 +17,7 @@ function login() {
         if (empty($_POST['username'])){
             $errors[]="Sisesta kasutajanimi!";
         }
-        if (empty($_POST['passwordd'])){
+        if (empty($_POST['password'])){
             $errors[]="Sisesta parool!";
         }
         if(empty($errors)) {
@@ -31,7 +32,7 @@ function login() {
                 // ok, muutjas $user on massiiv
                 $_SESSION['user']=$user;
                 $_SESSION['message']="Sisselogimine õnnestus";
-                header("Location: ?");
+                header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?mode=welcome");
                 exit(0);
             }
             else {
@@ -39,12 +40,9 @@ function login() {
             }
         }
     }
+    include("views/loginaken.html");
 }
 
-function kuvaRegistreeri() {
-    include_once("views/head.html");
-    include("views/register.html");
-}
 function reg(){
     global $L;
     if (!empty($_POST)) {
@@ -52,33 +50,36 @@ function reg(){
         if (empty($_POST['username'])) {
             $errors[] = "Sisesta kasutajanimi!";
         }
-        if (empty($_POST['password'])) {
+        if (empty($_POST['passwd'])) {
             $errors[] = "Sisesta parool!";
         }
-        if (empty($_POST['password2'])) {
+        if (empty($_POST['passwd2'])) {
             $errors[] = "Parooli peab 2 korda sisestama!";
         }
-        if (!empty($_POST['password']) && !empty($_POST['password2']) && $_POST['password'] != $_POST['password2']) {
+        if (!empty($_POST['passwd']) && !empty($_POST['passwd2']) && $_POST['passwd'] != $_POST['passwd2']) {
             //paroolid ei ole v6rdsed
             $errors[] = "Paroolid ei ole identsed!";
         }
+
         if (empty($errors)) {
+            global $L;
             // turvalisus
             $user = mysqli_real_escape_string($L, $_POST['username']);
-            $pass = mysqli_real_escape_string($L, $_POST['password']);
+            $pass = mysqli_real_escape_string($L, $_POST['passwd']);
 
             $sql = "INSERT INTO kinarusk_kasutajad (username, passwd) VALUES ('$user', SHA1('$pass'))";
             $result = mysqli_query($L, $sql);
             if ($result) {
                 // korras
                 $_SESSION['message'] = "Registreerumine õnnestus, logi sisse!";
-                header("Location: ?page=loginaken");
+                header("Location: ?mode=login");
                 exit(0);
             } else {
                 $errors[] = "Registreerumine ebaõnnestus, proovi uuesti!";
             }
         }
     }
+    include("views/register.html");
 }
 
 function logivalja() {
@@ -88,7 +89,7 @@ function logivalja() {
 }
 
 function alusta_sessioon(){
-    // siin ees võiks muuta ka sessiooni kehtivusaega, aga see pole hetkel tähtis
+    session_set_cookie_params(30*60);
     session_start();
 }
 

@@ -1,14 +1,14 @@
 <h1 id="pealkiri">Registreeri kasutajaks</h1>
-<form action="?page=register" method="POST">
+<form action="?mode=register" method="POST">
     <div id="register">
             <p>Kasutajanimi</p>
             <input type="text" name="username" placeholder="kasutajanimi"
                    value = "<?php if (!empty($_POST['username'])) echo htmlspecialchars($_POST['username']);?>" />
 
             <p>Parool</p>
-            <input type="password" name="password" placeholder="parool"/>
+            <input type="password" name="passwd" placeholder="parool"/>
             <p>Parool uuesti</p>
-            <input type="password" name="password2" placeholder="parool uuesti"/>
+            <input type="password" name="passwd2" placeholder="parool uuesti"/>
             <br/><br/>
             <input type="submit" value="Registreeri"/>
     </div>
