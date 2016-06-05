@@ -32,6 +32,7 @@ function login() {
                 // ok, muutjas $user on massiiv
                 $_SESSION['user']=$user;
                 $_SESSION['message']="Sisselogimine õnnestus";
+                alusta_sessioon();
                 header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?");
                 exit(0);
             }
