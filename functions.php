@@ -32,7 +32,7 @@ function login() {
                 // ok, muutjas $user on massiiv
                 $_SESSION['user']=$user;
                 $_SESSION['message']="Sisselogimine õnnestus";
-                header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?mode=welcome");
+                header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?");
                 exit(0);
             }
             else {
@@ -82,9 +82,9 @@ function reg(){
     include("views/register.html");
 }
 
-function logivalja() {
+function logout() {
     lopeta_sessioon();
-    header("Location: kontroller.php?mode=avaleht");
+    header("Location: ?mode=avaleht");
     exit(0);
 }
 

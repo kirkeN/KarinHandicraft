@@ -39,7 +39,7 @@ switch($mode){
         include("views/sisselogitud.html");
         break;
     case "logout":
-        logivalja();
+        logout();
         break;
     case "hinnad":
         include_once("views/head.html");

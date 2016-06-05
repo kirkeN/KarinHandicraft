@@ -55,7 +55,11 @@
         </li>
         <li class="menu"><a href="?mode=hinnad">Hinnad</a></li>
         <li class="menu"><a href="http://www.rahvakultuur.ee/?v=183&i=643">Kontakt</a></li>
+        <?php if(empty($_SESSION['user'])): ?>
         <li class="menu"><a href="?mode=login">Logi sisse</a></li>
+        <?php else: ?>
+        <li class="menu"><a href="?mode=logout">Logi välja</a></li>
+        <?php endif; ?>
     </ul>
 </div>
 
