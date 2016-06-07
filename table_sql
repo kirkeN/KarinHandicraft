@@ -3,12 +3,10 @@ id integer PRIMARY KEY auto_increment,
 username VARCHAR(100) UNIQUE ,
 passwd VARCHAR(50)
 );
-
-insert into kinarusk_kasutajad (username, passwd) VALUES ('sydametemurdja', 's33eiolenali');
-
-create table kinarusk_kommentaarid (
-id INTEGER PRIMARY KEY auto_increment,
-user_id INTEGER,
-content VARCHAR(500),
-postedat CURRENT_DATE
-);
+CREATE TABLE kinarusk_postitused(
+id INTEGER PRIMARY KEY AUTO_INCREMENT ,
+kasutaja_id INTEGER,
+content VARCHAR(10000) ,
+title VARCHAR(255) ,
+postedat TIMESTAMP
+)

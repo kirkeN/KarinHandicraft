@@ -18,4 +18,20 @@
     </tr>
 </table>
 <br>
+<div id="message">
+<form action="?mode=hinnad&id=<?php echo $id;?>" method="POST">
 
+    <p>Saada Karinile teade:</p>
+    <input type="text" name="title" placeholder="pealkiri"
+           value="<?php if (!empty($post['title'])) echo htmlspecialchars($post['title']);?>"/><br/> <br/>
+    <textarea name="content" rows="8" cols="48"><?php if (!empty($post['content'])) echo htmlspecialchars($post['content']);?></textarea><br/>
+
+    <input type="submit" value="Saada"/>
+</form>
+
+<?php if(!empty($errors)):
+	foreach($errors as $e):?>
+<p style="color:red"><?php echo $e; ?></p>
+<?php	endforeach;
+endif;?>
+</div>

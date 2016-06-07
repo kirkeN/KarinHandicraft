@@ -35,15 +35,13 @@ switch($mode){
     case "login":
         login();
         break;
-    case "welcome":
-        include("views/sisselogitud.html");
-        break;
     case "logout":
         logout();
         break;
     case "hinnad":
         include_once("views/head.html");
         include("views/tabel.html");
+        post();
         include_once("views/footer.html");
         break;
     default:

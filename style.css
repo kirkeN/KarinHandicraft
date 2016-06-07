@@ -177,3 +177,9 @@ table {
     margin: auto;
 }
 
+#message{
+    position: relative;
+    top: 130px;
+    text-align: center;
+    font-size: 150%;
+}

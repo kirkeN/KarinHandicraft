@@ -82,6 +82,43 @@ function reg(){
     }
     include("views/register.html");
 }
+function post(){
+    global $L;
+    // kas on sisse logitud
+    if (empty($_SESSION['user'])){
+        $_SESSION['message']="Postitamiseks peab sisse logima!";
+        header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?");
+        exit(0);
+    }
+
+    if(!empty($_POST)){
+        $errors=array();
+        if (empty($_POST['title'])){
+            $errors[]="Sisesta pealkiri!";
+        }
+        if (empty($_POST['content'])){
+            $errors[]="Kirjuta ikka ka midagi!!";
+        }
+
+        if (empty($errors)){
+            $title=mysqli_real_escape_string($L,$_POST['title']);
+            $content=mysqli_real_escape_string($L,$_POST['content']);
+            $user=mysqli_real_escape_string($L,$_SESSION['user']['id']);
+
+            $sql="INSERT INTO kinarusk_postitused (title, content, kasutaja_id, postedat) VALUES ('$title', '$content', $user, NOW() )";
+            $result = mysqli_query($L, $sql);
+            if ($result){
+                // kui tootab
+                $id = mysqli_insert_id($L);
+                $_SESSION['message']="Postitamine õnnestus!";
+                header("Location: ?mode=hinnad&id=$id");
+                exit(0);
+            } else {
+                $errors[]="Postitamine ebaõnnestus!";
+            }
+        }
+    }
+}
 
 function logout() {
     lopeta_sessioon();
