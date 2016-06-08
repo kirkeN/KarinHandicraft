@@ -39,10 +39,7 @@ switch($mode){
         logout();
         break;
     case "hinnad":
-        include_once("views/head.html");
-        include("views/tabel.html");
         post();
-        include_once("views/footer.html");
         break;
     default:
         include_once("views/head2.html");
