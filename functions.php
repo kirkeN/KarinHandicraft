@@ -84,14 +84,7 @@ function reg(){
 }
 function post(){
     global $L;
-    // kas on sisse logitud
-    if (empty($_SESSION['user'])){
-        $_SESSION['message']="Postitamiseks peab sisse logima!";
-        header("Location: http://enos.itcollege.ee/~kinarusk/kontroller.php?");
-        exit(0);
-    }
-
-    if(!empty($_POST)){
+    if(!empty($_POST) && !empty($_SESSION['user'])){
         $errors=array();
         if (empty($_POST['title'])){
             $errors[]="Sisesta pealkiri!";
@@ -118,6 +111,16 @@ function post(){
             }
         }
     }
+	if (!empty($_POST) && empty($_SESSION['user'])){
+		$errors=array();
+		$_SESSION['message']="Postitamiseks peab sisse logima!";
+		header("Location: ?mode=login");
+		exit(0);
+		
+	}
+	   include_once("views/head.html");
+       include("views/tabel.html");
+	   include_once("views/footer.html");
 }
 
 function logout() {
